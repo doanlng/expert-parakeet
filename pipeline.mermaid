@@ -1,0 +1,14 @@
+flowchart TD
+    A["1. Capture\nPhone slow-mo video"] --> B["2. Pose Extraction\nMediaPipe BlazePose"]
+    B --> C[("Bronze\nraw landmarks parquet")]
+    C --> D["3. Feature Engineering\nangles, smoothing, normalization"]
+    D --> E[("Silver\nangle time series parquet")]
+    E --> F["4. Reference Alignment\nDTW vs reference rep"]
+    F --> G["5. Deviation Scoring\nranked checkpoint gaps"]
+    G --> H[("Gold\ndeviation report")]
+    H --> I["6. LLM Feedback\nClaude API, vision + structured data"]
+    H --> J["7. Visualization\nskeleton overlay + angle curves"]
+    I --> K["Coaching cues"]
+    J --> K
+    K --> L["8. Iterate\nre-record next session"]
+    L --> A

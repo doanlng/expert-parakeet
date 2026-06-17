@@ -1,0 +1,16 @@
+[project]
+name = "ai-micro-learn"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "delta-spark==4.0.0",
+    "ipykernel>=7.3.0",
+    "matplotlib>=3.11.0",
+    "matplotlib-inline>=0.2.2",
+    "media>=0.1.6",
+    "mediapipe>=0.10.35",
+    "pipe>=2.2",
+    "pyspark==4.0.0",
+]
